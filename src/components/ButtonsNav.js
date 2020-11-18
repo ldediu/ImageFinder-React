@@ -1,10 +1,11 @@
 import React from "react";
 import "../styles/ButtonsNav.scss";
 
-function ButtonsNav() {
+function ButtonsNav({pageNum, changePage}) {
     return (
         <div className="ButtonsNav">
-            <h1>ButtonsNav</h1>
+            <button onClick={() => changePage(-1)} disabled={pageNum <= 1}>Back</button>
+            <button onClick={() => changePage(1)}>Next</button>
         </div>
     );
 }

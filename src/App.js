@@ -10,11 +10,12 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [searchField, setSearchField] = useState("");
 
-  const changePage = () => {
-    return 1;
-  };
-
-  const getData = () => {
+  const changePage = (val) => {
+    if (val === 1) {
+      setPageNum(pageNum + 1);
+    } else {
+      setPageNum(pageNum - 1);
+    }
     fetch(
       `https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_KEY}&q=${searchField}&image_type=photo&orientation=horizontal&per_page=6&page=${pageNum}`
     )
@@ -26,16 +27,24 @@ function App() {
       .catch((err) => console.log(err));
   };
 
-
   useEffect(() => {
-      getData();
-  });
+    console.log("render app");
+    fetch(
+      `https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_KEY}&q=${searchField}&image_type=photo&orientation=horizontal&per_page=6&page=${pageNum}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setImagesData(data.hits);
+        setIsLoading(false);
+      })
+      .catch((err) => console.log(err));
+  }, [searchField, pageNum]);
 
   return (
     <div className="App">
-      <HeadNav />
+      <HeadNav setSearchField={setSearchField} />
       <ImagesContainer imagesData={imagesData} isLoading={isLoading} />
-      <ButtonsNav />
+      <ButtonsNav pageNum={pageNum} changePage={changePage} />
     </div>
   );
 }
