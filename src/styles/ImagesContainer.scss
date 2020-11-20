@@ -1,5 +1,11 @@
 .ImagesContainer {
-  border: 1px solid black;
+  margin: 2rem auto;
+  max-width: 1100px;
+}
+
+.nomatch-gif {
+  margin: 0 auto;
+  max-width: 50%;
 }
 
 .lds-roller {
@@ -84,5 +90,32 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+.img-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  margin: 1rem 2rem;
+}
+
+@media (max-width: 1050px) {
+  .img-container {
+    margin: 1rem 3rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 850px) {
+  .img-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .img-container {
+    margin: 1rem 5rem;
+    grid-template-columns: repeat(1, 1fr);
   }
 }

@@ -1,0 +1,23 @@
+.HeadNav {
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  position: sticky;
+  top: 0;
+  opacity: 0.9;
+  z-index: 3;
+
+  .inputField {
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    height: 1.5rem;
+    width: 15rem;
+    background-color: #eee;
+    color: black;
+    padding-left: 1rem;
+    font-size: 1.1rem;
+  }
+}

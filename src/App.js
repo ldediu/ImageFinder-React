@@ -17,7 +17,7 @@ function App() {
       setPageNum(pageNum - 1);
     }
     fetch(
-      `https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_KEY}&q=${searchField}&image_type=photo&orientation=horizontal&per_page=6&page=${pageNum}`
+      `https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_KEY}&q=${searchField}&image_type=photo&orientation=horizontal&per_page=12&page=${pageNum}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -30,7 +30,7 @@ function App() {
   useEffect(() => {
     console.log("render app");
     fetch(
-      `https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_KEY}&q=${searchField}&image_type=photo&orientation=horizontal&per_page=6&page=${pageNum}`
+      `https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_KEY}&q=${searchField}&image_type=photo&orientation=horizontal&per_page=12&page=${pageNum}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="App">
       <HeadNav setSearchField={setSearchField} />
-      <ImagesContainer imagesData={imagesData} isLoading={isLoading} />
+      <ImagesContainer imagesData={imagesData} isLoading={isLoading} setSearchField={setSearchField}/>
       <ButtonsNav pageNum={pageNum} changePage={changePage} />
     </div>
   );

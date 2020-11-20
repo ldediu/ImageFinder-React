@@ -3,11 +3,10 @@ import "../styles/ImagesContainer.scss";
 import Card from "./Card";
 import noMatch from "../img/nomatch.gif"
 
-function ImagesContainer({ imagesData, isLoading }) {
+function ImagesContainer({ imagesData, isLoading, setSearchField }) {
   return (
     <div className="ImagesContainer">
-      <h1>Container</h1>
-      {!isLoading && imagesData.length === 0 && <img src={noMatch} alt="No images found" />}
+      {!isLoading && imagesData.length === 0 && <img className="nomatch-gif" src={noMatch} alt="No images found" />}
       {isLoading && (
         <div className="lds-roller">
           <div></div>
@@ -20,10 +19,12 @@ function ImagesContainer({ imagesData, isLoading }) {
           <div></div>
         </div>
       )}
-      {!isLoading &&
-        imagesData.map((image) => {
-          return <Card key={image.id} image={image} />;
-        })}
+      <div className="img-container">
+        {!isLoading &&
+          imagesData.map((image) => {
+            return <Card key={image.id} image={image} setSearchField={setSearchField}/>;
+          })}
+      </div>
     </div>
   );
 }
