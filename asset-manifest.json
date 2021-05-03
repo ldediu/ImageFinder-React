@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ImageFinder-React/static/css/main.591ea8b4.chunk.css",
+    "main.js": "/ImageFinder-React/static/js/main.2942ed07.chunk.js",
+    "main.js.map": "/ImageFinder-React/static/js/main.2942ed07.chunk.js.map",
+    "runtime-main.js": "/ImageFinder-React/static/js/runtime-main.bd40411f.js",
+    "runtime-main.js.map": "/ImageFinder-React/static/js/runtime-main.bd40411f.js.map",
+    "static/js/2.30e6a90f.chunk.js": "/ImageFinder-React/static/js/2.30e6a90f.chunk.js",
+    "static/js/2.30e6a90f.chunk.js.map": "/ImageFinder-React/static/js/2.30e6a90f.chunk.js.map",
+    "static/js/3.96e6764a.chunk.js": "/ImageFinder-React/static/js/3.96e6764a.chunk.js",
+    "static/js/3.96e6764a.chunk.js.map": "/ImageFinder-React/static/js/3.96e6764a.chunk.js.map",
+    "index.html": "/ImageFinder-React/index.html",
+    "static/css/main.591ea8b4.chunk.css.map": "/ImageFinder-React/static/css/main.591ea8b4.chunk.css.map",
+    "static/js/2.30e6a90f.chunk.js.LICENSE.txt": "/ImageFinder-React/static/js/2.30e6a90f.chunk.js.LICENSE.txt",
+    "static/media/nomatch.e2ded244.gif": "/ImageFinder-React/static/media/nomatch.e2ded244.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bd40411f.js",
+    "static/js/2.30e6a90f.chunk.js",
+    "static/css/main.591ea8b4.chunk.css",
+    "static/js/main.2942ed07.chunk.js"
+  ]
+}
